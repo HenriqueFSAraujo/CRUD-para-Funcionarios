@@ -1,0 +1,72 @@
+<window id="bairro" apply="br.gov.prodemge.proddigio.meucurso.controle.logradouro.BairroCtr" xmlns:n="http://www.zkoss.org/2005/zk/native">
+
+	<div class="row barraTop">
+		<div class="col-sm-6 barraTitle">
+			<label value="Bairro" class="title up" />
+		</div>
+		<div class="col-sm-6 barraBtn ">
+			<div id="barradebotoes" visible="true" />
+		</div>
+	</div>
+	<selecaobox>
+		<groupbox open="true" sclass="card">
+			<caption sclass="card-header">
+				<div class="card-icon">
+				
+					<span class="fas fa-search"></span>
+				</div>
+				<label sclass="card-title" value="Filtros" />
+			</caption>
+		</groupbox>
+			<groupbox open="true" sclass="card">
+			<caption sclass="card-header">
+				<div class="card-icon">
+					<span class="fas fa-file-alt"></span>
+				</div>
+				<label sclass="card-title" value="Resultado" />
+			</caption>
+			<div sclass="card-body">
+				<sylistbox id="listaSelecao" visible="true">
+					<listhead id="cabecalho">
+				<listheadersort label="Nome do bairro" value="nome" />
+				<listheadersort label="Cidade" value="cidade.nome" />
+			</listhead>
+			<listitem height="25px">
+				<listcellbind label="nome" />
+				<listcellbind label="cidade.nome" />
+			</listitem>
+		</sylistbox>
+		</div>
+		</groupbox>
+	</selecaobox>
+	<manutencaobox>
+	<groupbox open="true" sclass="card">
+			<caption sclass="card-header">
+				<div class="card-icon">
+					<span class="fas fa-file-alt"></span>
+				</div>
+				<label sclass="card-title" value="Formulário" />
+			</caption>
+			<div sclass="card-body">
+				<div sclass="text-right">
+					<label value="* Campos obrigatórios" sclass="red" />
+				</div>
+
+				<div class="form-group row">
+					<label value="* Nome do bairro:" sclass="col-sm-2 col-form-label" />
+					<div class="col-sm-5">
+						<textboxbind id="nome" maxlength="400" width="400px" />
+					</div>
+				</div>
+				<div class="form-group row">
+					<label value="* Cidade:" sclass="col-sm-2 col-form-label" />
+					<div class="col-sm-5">
+					<bandboxbind nomeDoObjeto="classecontrole.objetoAtual.cidade"  metodoFiltro="filtrarCidadesDeMinas" labelValorList="Nome-40%:nome;Estado-30%:estado.nome;Pais-30%:estado.pais.nome" width="400px" />					
+				</div>
+				</div>
+				</div>
+				</groupbox>
+				
+		
+	</manutencaobox>
+</window>

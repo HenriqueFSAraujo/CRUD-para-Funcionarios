@@ -1,0 +1,8 @@
+	
+<vlayout>
+	<hlayout>
+<button label="Anexar Foto" id="anexar" onClick='classecontrole.anexar("imagem")' sclass="btn-success btn" />
+<button label="Limpar" onClick='classecontrole.limparFoto("imagem")' sclass="btn-warning btn" />
+	</hlayout>
+<imagebind id="imagem" nomeDoObjeto="classecontrole.objetoAtual.imagem" width="400px" height="400px" />
+</vlayout>   

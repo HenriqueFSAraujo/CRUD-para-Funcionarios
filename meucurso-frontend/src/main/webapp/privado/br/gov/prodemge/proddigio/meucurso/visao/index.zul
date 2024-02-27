@@ -1,0 +1,22 @@
+<zk xmlns:w="http://www.zkoss.org/2005/zk/client" xmlns:h="http://www.w3.org/1999/xhtml">
+	<?meta charset="utf-8" ?>
+	<?meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"?>
+	<?meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"?>
+	<?page title="Meucurso | Prodemge"?>
+	<?link rel="icon" type="image/x-icon" href="/publico/br/gov/prodemge/tema/imagens/favicon.ico"?>
+	<?link href="/publico/br/gov/prodemge/tema/imagens/favicon.ico" rel="shortcut icon"?>
+	<?meta name='theme-color' content='#9b3f3f' ?>
+
+	<?link rel='stylesheet' href='/publico/br/gov/prodemge/tema/css/core.css' media='all' ?>
+	<?link rel='stylesheet' href='/publico/br/gov/prodemge/tema/css/custom.css' media='all' ?>
+
+	<!--[if lt IE 9]><?script src="http://html5shim.googlecode.com/svn/trunk/html5.js"?><?script type='text/javascript' src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"?><![endif] -->
+
+	<window id="index" apply="br.gov.prodemge.proddigio.meucurso.controle.MeucursoWindowIndex" sclass="window_pdg tempVertical">
+		<include id="introducao" src="introducao.zul" />
+	</window>
+	
+	<?script type="text/javascript" src="/publico/br/gov/prodemge/tema/js/popper.min.js"?>
+	<?script type="text/javascript" src="/publico/br/gov/prodemge/tema/js/bootstrap.min.js"?>
+	<?script type="text/javascript" src="/publico/br/gov/prodemge/tema/js/core.js"?>
+</zk>

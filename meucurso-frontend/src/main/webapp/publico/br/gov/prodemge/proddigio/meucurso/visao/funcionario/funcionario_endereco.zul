@@ -1,0 +1,54 @@
+<vlayout id="endereco">
+
+	<div class="form-group row">
+		<label value="* BuscarCep:" sclass="col-sm-1 col-form-label" />
+		<div class="col-sm-11">
+	<cepboxbind nomeDoObjeto="classecontrole.cepDeApoio" 
+	onBlur="classecontrole.recuperaLogradouroPorCep(self.value)" />
+	</div>
+	</div>
+	<separator> </separator>
+	
+<div class="form-group row">
+		<label value="* Logradouro:" sclass="col-sm-1 col-form-label" />
+		<div class="col-sm-11">
+	<bandboxbind nomeDoObjeto="classecontrole.objetoAtual.funcionarioEndereco.logradouro" identificador="logradouro" labelValorList="Logradouro:nome;Bairro:bairro;Cidade:bairro.cidade"
+		atualizarComponentes="endereco" />
+		</div>
+	</div>
+   <separator> </separator>
+   <div class="form-group row">
+		<label value="* Numero:" sclass="col-sm-1 col-form-label" />
+		<div class="col-sm-11">
+	<textboxbind nomeDoObjeto="classecontrole.objetoAtual.funcionarioEndereco.numero" />
+	</div>
+	</div>
+		<separator></separator>
+		<div class="form-group row">
+		<label value="* Cep:" sclass="col-sm-1 col-form-label" />
+		<div class="col-sm-11">
+	<cepboxbind nomeDoObjeto ="classecontrole.objetoAtual.funcionarioEndereco.logradouro.cep" />
+	</div>
+	</div>
+	<separator></separator>
+	<div class="form-group row">
+		<label value="* Bairro:" sclass="col-sm-1 col-form-label" />
+		<div class="col-sm-11">
+	<bandboxbind nomeDoObjeto ="classecontrole.objetoAtual.funcionarioEndereco.logradouro.bairro" />
+	</div>
+	</div>
+		<separator></separator>
+		<div class="form-group row">
+		<label value="* Cidade:" sclass="col-sm-1 col-form-label" />
+		<div class="col-sm-11">
+	<bandboxbind nomeDoObjeto ="classecontrole.objetoAtual.funcionarioEndereco.logradouro.bairro.cidade" />
+	</div>
+	</div>
+	<separator></separator>
+	<div class="form-group row">
+		<label value="* Estado:" sclass="col-sm-1 col-form-label" />
+		<div class="col-sm-11">
+	<bandboxbind nomeDoObjeto ="classecontrole.objetoAtual.funcionarioEndereco.logradouro.bairro.cidade.estado" />
+	</div>
+	</div>
+</vlayout>

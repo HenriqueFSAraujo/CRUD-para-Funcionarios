@@ -1,0 +1,84 @@
+<window id="casodeusopublico" apply="br.gov.prodemge.proddigio.meucurso.controle.casousopublico.CasoUsoPublicoCtr" xmlns:n="http://www.zkoss.org/2005/zk/native">
+	<div sclass="row barraTop">
+		<div sclass="col-md-6 barraTitle">
+			<label sclass="title" value="Caso de uso público" />
+		</div>
+		<div sclass="col-md-6 barraBtn">
+			<div id="barradebotoes" />
+		</div>
+	</div>
+
+	<selecaobox>
+		<groupbox open="true" sclass="card">
+			<caption sclass="card-header">
+				<div class="card-icon">
+					<span class="fas fa-search" />
+				</div>
+				<label sclass="card-title" value="Filtros" />
+			</caption>
+			<div class="form-group row">
+				<label value="Descrição:" sclass="col-md-1 col-form-label" />
+				<div class="col-md-11">
+					<textboxbind nomeDoObjeto="classecontrole.objetoAtualArg.descricao" usaLike="AMBOS" />
+				</div>
+			</div>
+		</groupbox>
+
+		<groupbox open="true" sclass="card">
+			<caption sclass="card-header">
+				<div class="card-icon">
+					<span class="fas fa-file-alt" />
+				</div>
+				<label sclass="card-title" value="Resultado" />
+			</caption>
+
+			<sylistbox id="listaSelecao" visible="true" sclass="heightAuto">
+				<listhead id="cabecalho">
+					<listheadersort label="Descrição" value="descricao" />
+					<listheadersort label="Data Início" value="dataInicio" />
+					<listheadersort label="Data Fim" value="dataFim" />
+				</listhead>
+				<listitem height="25px">
+					<listcellbind label="descricao" />
+					<listcellbind label="dataInicioFormatada" />
+					<listcellbind label="dataFimFormatada" />
+				</listitem>
+			</sylistbox>
+		</groupbox>
+	</selecaobox>
+
+	<manutencaobox>
+		<groupbox open="true" sclass="card">
+			<caption sclass="card-header">
+				<div class="card-icon">
+					<span class="fas fa-file-alt" />
+				</div>
+				<label sclass="card-title" value="Formulário" />
+			</caption>
+			<div sclass="text-right">
+				<label value="* Campos obrigatórios" sclass="red" />
+			</div>
+
+			<div class="form-group row">
+				<label value="* Descrição:" sclass="col-md-2 col-form-label" />
+				<div class="col-md-5">
+					<textboxbind nomeDoObjeto="classecontrole.objetoAtual.descricao" />
+				</div>
+			</div>
+			<div class="form-group row">
+				<label value="* Data início:" sclass="col-md-2 col-form-label" />
+				<div class="col-md-2">
+					<dateboxbind nomeDoObjeto="classecontrole.objetoAtual.dataInicio" />
+				</div>
+				<div class="col-md-1 text-center">
+					<label value="até" sclass="col-form-label text-center" />
+				</div>
+				<div class="col-md-2">
+					<dateboxbind nomeDoObjeto="classecontrole.objetoAtual.dataFim" />
+				</div>
+			</div>
+		</groupbox>
+	</manutencaobox>
+	
+
+</window>

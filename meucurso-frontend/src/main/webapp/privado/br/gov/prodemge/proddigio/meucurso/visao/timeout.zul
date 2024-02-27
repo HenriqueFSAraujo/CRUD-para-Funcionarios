@@ -1,0 +1,8 @@
+<window class="window_pdg" xmlns:n="native">
+	<attribute name="onCreate">
+		Executions.getCurrent().getSession().setAttribute("unidadeAutenticada", null);
+		Executions.getCurrent().getSession().setAttribute("usuarioAutenticado", null);
+		Executions.getCurrent().getSession().setAttribute("unidadesCarregadas", null);
+		Executions.sendRedirect("/");
+	</attribute>		
+</window>

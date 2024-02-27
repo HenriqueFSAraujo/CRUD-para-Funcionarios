@@ -1,0 +1,91 @@
+<window id="pais2" apply=" br.gov.prodemge.proddigio.meucurso.controle.pais.PaisCtr" xmlns:n="http://www.zkoss.org/2005/zk/native">
+	
+	<div class="row barraTop">
+		<div class="col-sm-6 barraTitle">
+			<label value="Pais" class="title up" />
+		</div>
+		<div class="col-sm-6 barraBtn ">
+			<div id="barradebotoes" visible="true" />
+		</div>
+	</div>
+	<selecaobox>
+		<groupbox open="true" sclass="card">
+			<caption sclass="card-header">
+				<div class="card-icon">
+
+					<span class="fas fa-search"></span>
+				</div>
+				<label sclass="card-title" value="Filtros" />
+			</caption>
+			<div sclass="card-body">
+				<div class="form-group row">
+					
+					<div class="col-sm-11">
+						<label value="Nome do país:" sclass="col-sm-1 col-form-label" />
+						<textboxbind nomeDoObjeto="classecontrole.objetoAtualArg.nome" usaLike="AMBOS" />
+					</div>
+				</div>
+			</div>
+		</groupbox>
+		<groupbox open="true" sclass="card">
+			<caption sclass="card-header">
+				<div class="card-icon">
+					<span class="fas fa-file-alt"></span>
+				</div>
+				<label sclass="card-title" value="Resultado" />
+			</caption>
+			<div sclass="card-body">
+				<sylistbox id="listaSelecao" visible="true">
+					<listhead id="cabecalho">
+						<listheadersort label="Nome" value="nome" />
+					</listhead>
+				</sylistbox>
+
+			</div>
+
+		</groupbox>
+
+	</selecaobox>
+
+	<manutencaobox>
+	<groupbox open="true" sclass="card">
+			<caption sclass="card-header">
+				<div class="card-icon">
+					<span class="fas fa-file-alt"></span>
+				</div>
+				<label sclass="card-title" value="Formulário" />
+			</caption>
+			<div sclass="card-body">
+				<div sclass="text-right">
+					<label value="* Campos obrigatórios" sclass="red" />
+				</div>
+		<label value="Nome do país:"></label>
+		<textboxbind id="nome" maxlength="200" width="600px" />
+		<space height="20px"></space>
+
+		<detbox nomeDoObjeto="classecontrole.objetoAtual.estados" label="Cadastro dos Estados" sclass="estado">
+			<listboxdet id="estados" rows="2" pageSize="10">
+				<listitem>
+					<listcell>
+						<label>Nome do estado:</label>
+						<textboxbind nomeDoObjeto="estados.nome" width="600px" />
+						<space height="20px"></space>
+						<detbox nomeDoObjeto="estados.cidades" label="Cadastro das Cidades">
+							<listboxdet id="cidades" rows="2" pageSize="10">
+								<listitem>
+									<listcell>
+										<label>Nome da cidade:</label>
+										<textboxbind nomeDoObjeto="cidades.nome" width="600px" />
+									</listcell>
+								</listitem>
+							</listboxdet>
+						</detbox>
+						</listcell>
+				</listitem>
+			</listboxdet>
+		</detbox>
+		</div>
+		</groupbox>
+	</manutencaobox>
+</window>
+

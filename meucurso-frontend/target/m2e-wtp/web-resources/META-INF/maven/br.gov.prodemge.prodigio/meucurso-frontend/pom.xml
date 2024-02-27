@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>br.gov.prodemge.prodigio</groupId>
+		<artifactId>meucurso</artifactId>
+		<version>0.01-SNAPSHOT</version>
+		<relativePath>../meucurso/pom.xml</relativePath>
+	</parent>
+
+	<artifactId>meucurso-frontend</artifactId>
+	<packaging>war</packaging>
+
+	<name>meucurso-web</name>
+	<description>Aplicação web</description>
+
+	<dependencies>
+
+		<!-- Dependency on the EJB module so we can use it's services if needed -->
+		<dependency>
+			<groupId>org.jboss.spec.javax.ejb</groupId>
+			<artifactId>jboss-ejb-api_3.1_spec</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- Import the CDI API, we use provided scope as the API is included in 
+			JBoss AS 7 -->
+		<dependency>
+			<groupId>javax.enterprise</groupId>
+			<artifactId>cdi-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- Import the JPA API, we use provided scope as the API is included in 
+			JBoss AS 7 -->
+		<dependency>
+			<groupId>org.hibernate.javax.persistence</groupId>
+			<artifactId>hibernate-jpa-2.0-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.jboss.spec.javax.servlet</groupId>
+			<artifactId>jboss-servlet-api_3.0_spec</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>br.gov.prodemge.prodigio</groupId>
+			<artifactId>meucurso-domain</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>br.mg.gov.prodemge.prodigio</groupId>
+			<artifactId>prodigio-test</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>br.mg.gov.prodemge.certificacao</groupId>
+			<artifactId>certificacao-digital-api</artifactId>
+			<version>2.4.03</version>
+		</dependency>
+		
+		<!-- VACINA -->
+		<dependency>
+			<groupId>br.mg.gov.prodemge.vaccine.prodigio8</groupId>
+			<artifactId>vaccine-frontend</artifactId>
+			<version>${version.vacina}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.jboss.spec.javax.ws.rs</groupId>
+			<artifactId>jboss-jaxrs-api_1.1_spec</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- DEPENDENCIA DO SSC -->
+		<dependency>
+			<groupId>br.gov.prodemge.ssc</groupId>
+			<artifactId>ssc-client-adap-6.4</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.zkoss.ext</groupId>
+					<artifactId>commons-io</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>commons-logging</groupId>
+					<artifactId>commons-logging</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>br.mg.gov.prodemge.prodigio</groupId>
+					<artifactId>prodigio-comum</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+	
+		<dependency>
+			<groupId>br.mg.gov.prodemge.prodigio</groupId>
+			<artifactId>prodigio-web-zk</artifactId>
+			
+			<exclusions>
+				<exclusion>
+					<artifactId>sapphire</artifactId>
+					<groupId>org.zkoss.theme</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>silvertail</artifactId>
+					<groupId>org.zkoss.theme</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>zk-bootstrap</artifactId>
+					<groupId>org.zkoss.addons</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-jaxrs</artifactId>
+			<version>1.9.13</version>
+		</dependency>
+		<dependency>
+    		<groupId>org.ocpsoft.rewrite</groupId>
+    		<artifactId>rewrite-servlet</artifactId>
+    		<version>3.4.1.Final</version>
+		</dependency>
+		<dependency>
+   			<groupId>org.ocpsoft.rewrite</groupId>
+		    <artifactId>rewrite-config-prettyfaces</artifactId>
+		    <version>3.4.1.Final</version>
+		</dependency>
+		
+		<!-- DEPENDENCIA TEMA CSS -->
+		<dependency>
+    		<groupId>br.gov.prodemge.tema</groupId>
+    		<artifactId>templateDefault-ruby-theme</artifactId>
+    		<version>0.0.2-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<configuration></configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

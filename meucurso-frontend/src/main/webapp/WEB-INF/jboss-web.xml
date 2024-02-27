@@ -1,0 +1,8 @@
+<jboss-web>
+<!-- 	<security-domain>siggsecurityjaas</security-domain> -->
+	<security-domain>sp</security-domain>
+	<context-root>meucurso-frontend</context-root>
+	<valve>
+		<class-name>br.gov.prodemge.ssc.picketlink.ProdemgeAdap64ServiceProviderAuthenticator</class-name>
+	</valve>		
+</jboss-web>

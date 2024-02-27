@@ -1,0 +1,85 @@
+<window id="principal" apply="br.gov.prodemge.proddigio.meucurso.controle.MeucursoWindowIntroducao" sclass="window_pdg" xmlns:n="native">
+	<div sclass="navbar navbar-expand fixed-top">
+		<a zclass="menuicon ibars">
+			<attribute name="onClick"><![CDATA[Clients.evalJavaScript("abreFechaMenu();");]]></attribute>
+		</a>
+		
+		<div zclass="navigation">
+			<div id="menubar" sclass="menubar">
+				<navbar id="menubar_principal" orient="vertical" collapsed="false">
+					<nav label="Menu" visible="false" onCreate="classecontrole.insereMenuPopUp(self)" iconSclass="fas fa-cogs"></nav>
+					<!-- Os itens dos menus devem ser cadastrados no SSC para aparecerem na tela -->
+				</navbar>
+			</div>
+
+			<a zclass="colapsemenu">
+				<attribute name="onClick"><![CDATA[menubar_principal.setCollapsed(!menubar_principal.isCollapsed());Clients.evalJavaScript("menuColapse();");]]></attribute>
+			</a>
+		</div>
+
+		<div zclass="navbar-brand">
+			<span class="logo">Meucurso</span>
+		</div>
+
+		<div zclass="barra-usuario ml-auto">
+			<n:ul sclass="navbar-nav">
+				<n:li >
+					<label id="unidadeLogada" value="${sessionScope.unidadeAutenticada.nome}" sclass="codigoSistema"/>
+				</n:li>
+				<n:li class="dropdown nav-item">
+					<n:a class="nav-link" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<!-- <n:i class="fas fa-user-circle"></n:i> --> <!-- usar esse circulo caso nao queira a foto do usuario -->
+						<image id="foto" zclass="img-fluid fotoUser"></image>
+					</n:a>
+
+					<div class="dropdown-menu dropdown-menu-right animated flipInY">
+						<n:ul class="dropdown-user">
+							<n:li class="user-box">
+								<div class="well">
+									<div sclass="d-block d-lg-none">
+										<label value="${sessionScope.unidadeAutenticada.nome}" />
+										<n:hr></n:hr>
+									</div>
+									<label id="codigoUnidade" value="${sessionScope.unidadeAutenticada.codigo}" />
+									<label id="cpfLogado" value="${sessionScope.cpfUsuarioLogado}" zclass="cpfLogado" />									
+								</div>
+								<label id="nomeLogado" value="${sessionScope.usuarioAutenticado.nome}" zclass="nomeLogado" />
+							</n:li>
+							<n:li role="separator" class="divider"></n:li>
+							<n:li>
+								<a href="/">
+									<n:i class="fas fa-sign-out-alt"></n:i>
+									<label value="Ir para a área pública" />
+								</a>
+							</n:li>
+ 							<n:li role="separator" class="divider"></n:li>
+							<n:li>
+								<a onClick="classecontrole.signOut()">
+									<n:i class="fas fa-power-off "></n:i>
+									<label value="Sair" />
+								</a>
+							</n:li>
+						</n:ul>
+					</div>
+				</n:li>
+			</n:ul>
+		</div>
+	</div>
+
+	<div zclass="main">
+		<div id="meio" zclass="content container-fluid"/>
+	</div>
+
+	<div zclass="footer">
+		<div zclass="container-fluid">
+			<div zclass="row">
+				<div zclass="col-md-9 footerVersion">
+					<span class="version">V 1.0</span>
+				</div>
+				<div zclass="col-md-3 footerLogo">
+					<image src="/publico/br/gov/prodemge/tema/imagens/logo_prodemge.png" sclass="img-fluid"/>
+				</div>
+			</div>
+		</div>
+	</div>
+</window>

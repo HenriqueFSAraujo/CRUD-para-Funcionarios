@@ -1,0 +1,45 @@
+<window class="window_pdg tempVertical" xmlns:n="native">
+	<?meta charset="utf-8" ?>
+	<?meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"?>
+	<?meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"?>
+	<?page title="Atestado de Frequência | Prodemge"?>
+	<?link rel="icon" type="image/x-icon" href="/publico/br/gov/prodemge/tema/imagens/favicon.ico"?>
+	<?link href="/publico/br/gov/prodemge/tema/imagens/favicon.ico" rel="shortcut icon"?>
+	<?meta name='theme-color' content='#3f4a59' ?>
+
+	<?link rel='stylesheet' href='/publico/br/gov/prodemge/tema/css/core.css' media='all' ?>
+
+	<!--[if lt IE 9]><?script src="http://html5shim.googlecode.com/svn/trunk/html5.js"?><?script type='text/javascript' src="http://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js"?><![endif] -->
+
+	<div sclass="navbar navbar-expand fixed-top">
+		<div zclass="navbar-brand">
+			<span zclass="logotxt">Meucurso</span>
+		</div>
+	</div>
+
+	<div class="main">
+		<div class="container-fluid content centerOut">
+			<div sclass="card cardModulo">
+				<div class="card-header">
+					<n:i class="far fa-times-circle"></n:i>
+					<label value="Erro inesperado no servidor" />
+				</div>
+				<div sclass="card-body text-center">
+					<button zclass="btn btn-tema" label="Prosseguir para página inicial">
+						<attribute name="onClick">Executions.sendRedirect("/");</attribute>								
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-3 offset-md-9 footerLogo">
+					<image src="/publico/br/gov/prodemge/tema/imagens/logo_prodemge.png" sclass="img-fluid" />
+				</div>
+			</div>
+		</div>
+	</div>
+</window>

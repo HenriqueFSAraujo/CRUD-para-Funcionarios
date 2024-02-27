@@ -1,0 +1,13 @@
+<language-addon>
+	<zscript language="Java">
+		import br.gov.prodigio.controle.componente.*;
+		import org.zkoss.zul.*;
+	</zscript>
+	<addon-name>meucurso-addon</addon-name>
+	<device-type>ajax</device-type>
+	<namespace>http://www.zkoss.org/2005/zul</namespace>
+	<extension>zul</extension><!-- the first extension is the major one -->
+	<extension>xul</extension>
+	<language-name>xul/html</language-name>
+	<!-- <renderer-class>org.zkoss.zul.impl.PageRenderer</renderer-class> -->
+</language-addon>

@@ -1,0 +1,44 @@
+<vlayout>
+	<div class="form-group row">
+		<label value="* Nome:" sclass="col-md-1 col-form-label" />
+		<div class="col-md-11">
+			<textboxbind nomeDoObjeto="classecontrole.objetoAtual.nome" constraint="no empty" upper="false" />
+		</div>
+	</div>
+	<div class="form-group row">
+		<label value="* CPF:" sclass="col-md-1 col-form-label" />
+		<div class="col-md-11">
+			<cpfboxbind nomeDoObjeto="classecontrole.objetoAtual.cpf" />
+		</div>
+	</div>
+	<div class="form-group row">
+		<label value="* Matrícula:" sclass="col-md-1 col-form-label" />
+		<div class="col-md-11">
+			<textboxbind nomeDoObjeto="classecontrole.objetoAtual.matricula" />
+		</div>
+	</div>
+	<div class="form-group row">
+		<label value="* Tem Filho?:" sclass="col-md-1 col-form-label" />
+		<div class="col-md-11">
+			<checkboxbind  nomeDoObjeto="classecontrole.objetoAtual.temFilho" />
+		</div>
+	</div>
+	<div class="form-group row">
+		<label value="* Salário?:" sclass="col-md-1 col-form-label" />
+		<div class="col-md-11">
+			<moneyboxbind nomeDoObjeto="classecontrole.objetoAtual.salario" />
+		</div>
+	</div>
+	<div class="form-group row">
+		<label value="* Estado Civil:" sclass="col-md-1 col-form-label" />
+		<div class="col-md-11">
+			<bandboxbind nomeDoObjeto="classecontrole.objetoAtual.estadoCivil" />
+		</div>
+	</div>
+	<div class="form-group row">
+		<label value="* Descrição:" sclass="col-md-1 col-form-label" />
+		<div class="col-md-11">
+			<ckeditorbind nomeDoObjeto="classecontrole.objetoAtual.breveDescricao" />
+		</div>
+	</div>
+</vlayout>

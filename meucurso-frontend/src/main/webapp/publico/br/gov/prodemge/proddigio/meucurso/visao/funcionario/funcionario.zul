@@ -1,0 +1,100 @@
+<window id="funcionario" apply="br.gov.prodemge.proddigio.meucurso.controle.funcionario.FuncionarioCtr">
+	<div class="row barraTop">
+		<div class="col-md-6 barraTitle">
+			<label value="Funcionário" class="title" />
+		</div>
+		<div class="col-md-6 barraBtn">
+			<div id="barradebotoes" visible="true" />
+		</div>
+	</div>
+
+	<selecaobox>
+		<groupbox open="true" sclass="card">
+			<caption sclass="card-header">
+				<div class="card-icon">
+					<span class="fas fa-search" />
+				</div>
+				<label sclass="card-title" value="Filtros" />
+			</caption>
+			<div class="form-group row">
+				<label value="Nome:" sclass="col-md-1 col-form-label" />
+				<div class="col-md-11">
+					<textboxbind nomeDoObjeto="classecontrole.objetoAtual.nome" usaLike="AMBOS" />
+				</div>
+			</div>
+		</groupbox>
+
+		<groupbox open="true" sclass="card">
+			<caption sclass="card-header">
+				<div class="card-icon">
+					<span class="fas fa-file-alt"></span>
+				</div>
+				<label sclass="card-title" value="Resultado" />
+			</caption>
+
+			<sylistbox id="listaSelecao" sclass="heightAuto">
+				<listhead id="cabecalho">
+					<listheadersort label="Nome" value="nome" />
+					<listheadersort label="CPF" value="cpf" />
+					<listheadersort label="Matrícula" value="matricula" />
+					<listheadersort label="Tem FIlho" value="temFilho" />
+						
+					
+				</listhead>
+				<listitem height="25px">
+					<listcellbind label="nome" />
+					<listcellbind label="cpf" />
+					<listcellbind label="matricula" />
+					<listcellbind label="temFilhoFormatado" />
+				
+					
+					
+				</listitem>
+			</sylistbox>
+		</groupbox>
+	</selecaobox>
+
+	<manutencaobox>
+		<groupbox open="true" sclass="card">
+			<caption sclass="card-header">
+				<div class="card-icon">
+					<span class="fas fa-file-alt" />
+				</div>
+				<label sclass="card-title" value="Formulário" />
+			</caption>
+
+			<div sclass="text-right">
+				<label value="* Campos obrigatórios" sclass="red" />
+			</div>
+
+			<tabbox>
+				<tabs>
+					<tab label="Dados básicos" />
+					<tab label="Anexos" />
+					<tab label="Foto" />
+					<tab label="Cursos" />
+					<tab label="Endereço"/>
+					
+				</tabs>
+				<tabpanels>
+					<tabpanel>
+						<apply templateURI="funcionario/funcionario_dados_basicos.zul" />
+					</tabpanel>
+					<tabpanel>
+						<apply templateURI="funcionario/funcionario_anexos.zul" />
+					</tabpanel>
+					<tabpanel>
+						<apply templateURI="funcionario/funcionario_foto.zul" />
+					</tabpanel>
+					<tabpanel>
+						<apply templateURI="funcionario/funcionario_curso.zul" />
+					</tabpanel>
+					<tabpanel>
+						<apply templateURI="funcionario/funcionario_endereco.zul" />
+					</tabpanel>
+				</tabpanels>
+			</tabbox>
+
+		</groupbox>
+	</manutencaobox>
+</window>

@@ -1,0 +1,16 @@
+<detbox width="100%" nomeDoObjeto="classecontrole.objetoAtual.cursos" label="Cursos">
+	<listboxdet id="cursos" rows="5" pageSize="5" multiplo="true">
+		<listhead>
+			<listheader label="Nome"  />
+		</listhead>
+		<listitem value="cursos">
+			<listcell >
+				<bandboxbind  nomeDoObjeto="cursos.cursoVO"  labelValorList="Nome-50%:nome;Area-50%:areaCurso"  readonly="true"  ></bandboxbind>
+			</listcell>
+		    <listcell>
+		    <label value="* Cursou:"/>
+		    <checkboxbind nomeDoObjeto="classecontrole.objetoAtual.funcionario_cursoVO.cursou" />			
+		</listcell>
+		</listitem>
+	</listboxdet>
+</detbox>

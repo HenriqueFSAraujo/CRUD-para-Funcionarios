@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zk>
+	<device-config>
+		<device-type>ajax</device-type>
+		<timeout-uri>/</timeout-uri>
+		<!-- An empty URL can cause the browser to reload the same URL -->
+	</device-config>
+	<system-config>
+		<response-charset>UTF-8</response-charset>
+		<upload-charset>ISO-8859-1</upload-charset>
+		<disable-event-thread>true</disable-event-thread>
+		<max-upload-size>81920</max-upload-size>
+	</system-config>
+	<language-config>
+		<addon-uri>/WEB-INF/lang-addon.xml</addon-uri>
+	</language-config>
+	<system-config>
+		<id-generator-class>br.gov.prodigio.visao.helper.ProIdGenarator</id-generator-class>
+	</system-config>
+	<!-- Configuração necessária para não reaproveitar uuID's de elementos removidos da Árvore DOM. Esse reaproveitamento (reciclagem) gera bugs quando trabalhamos com os uuID's. -->
+	<library-property>
+		<name>org.zkoss.zk.ui.uuidRecycle.disabled</name>
+		<value>true</value>
+	</library-property>
+	
+	<!-- DESABILITA TEMA PADRÃO ZK -->
+	<desktop-config>
+		<disable-theme-uri>~./zul/css/zk.wcs</disable-theme-uri>			
+	</desktop-config>
+	
+	<!-- Configuração necessária para impedir do ZK de utilizar seus próprios estilos para dispositivos móveis tablet e celular -->
+	<library-property>
+		<name>org.zkoss.zkmax.tablet.ui.disabled</name>
+		<value>true</value>
+	</library-property>
+	
+<!-- 	
+	<library-property>
+		<name>org.zkoss.bind.appConverters</name>
+		<value>imageConverter=br.gov.prodemge.prodigio.arquiteturacorporativa.controle.componente.ImageConverter</value>
+	</library-property> -->
+</zk>

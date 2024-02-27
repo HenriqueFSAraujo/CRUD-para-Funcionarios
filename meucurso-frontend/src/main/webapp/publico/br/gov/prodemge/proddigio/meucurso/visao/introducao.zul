@@ -1,0 +1,109 @@
+<window id="principal" apply="br.gov.prodemge.proddigio.meucurso.controle.MeucursoPublicoWindowIntroducao" sclass="windowPdg" xmlns:n="native">
+	<div sclass="navbar navbar-expand fixed-top">
+		<a zclass="menuicon ibars">
+			<attribute name="onClick"><![CDATA[Clients.evalJavaScript("abreFechaMenu();");]]></attribute>
+		</a>
+		
+		<div zclass="navigation">
+			<div id="menubar" class="menubar">
+				<navbar id="menubar_principal" orient="vertical" collapsed="false">
+					<nav label="Menu" visible="true" iconSclass="fas fa-cogs">
+						<navitem label="Caso de uso público" visible="true" onClick="classecontrole.abrir(self); classecontrole.abreFechaMenu(menubar)">
+							<custom-attributes urlcasodeuso="casousopublico/casousopublico.zul" />
+						</navitem>
+						<navitem label="Funcionário" visible="true" onClick="classecontrole.abrir(self); classecontrole.abreFechaMenu(menubar)">
+							<custom-attributes urlcasodeuso="funcionario/funcionario.zul" />
+						</navitem>
+						<navitem label="Compromisso" visible="true" onClick="classecontrole.abrir(self); classecontrole.abreFechaMenu(menubar)">
+							<custom-attributes urlcasodeuso="compromisso/compromisso.zul" />
+						</navitem>
+						<navitem label="Curso" visible="true" onClick="classecontrole.abrir(self); classecontrole.abreFechaMenu(menubar)">
+							<custom-attributes urlcasodeuso="curso/curso.zul" />
+						</navitem>
+						<navitem label="Logradouro" visible="true" onClick="classecontrole.abrir(self); classecontrole.abreFechaMenu(menubar)">
+							<custom-attributes urlcasodeuso="logradouro/logradouro.zul" />
+						</navitem>
+						<navitem label="Pais" visible="true" onClick="classecontrole.abrir(self); classecontrole.abreFechaMenu(menubar)">
+							<custom-attributes urlcasodeuso="pais/pais.zul" />
+						</navitem>
+						<navitem label="bairro" visible="true" onClick="classecontrole.abrir(self); classecontrole.abreFechaMenu(menubar)">
+							<custom-attributes urlcasodeuso="bairro/bairro.zul" />
+						</navitem>
+					</nav>
+				</navbar>
+			</div>
+
+			<a class="colapsemenu">
+				<attribute name="onClick">
+					<![CDATA[menubar_principal.setCollapsed(!menubar_principal.isCollapsed());Clients.evalJavaScript("menuColapse();");]]>
+				</attribute>
+			</a>
+		</div>
+
+		<div sclass="navbar-brand">
+			<span class="logotxt">Meucurso</span>
+		</div>
+		
+		<div id="barraUsuarioDeslogado" sclass="barra-usuario" visible="false">
+			<button onClick="classecontrole.signIn()" sclass="btn-danger btn-login" label="Login"/>	
+		</div>
+		<div id="barraUsuarioLogado" sclass="barra-usuario" visible="false">
+			<n:ul sclass="navbar-nav">
+				<n:li>
+					<label id="unidadeLogada" value="${sessionScope.unidadeAutenticada.nome}" sclass="codigoSistema"/>
+				</n:li>
+				<n:li class="dropdown nav-item">
+					<n:a class="nav-link" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<image id="foto" zclass="fotoUser"/>
+					</n:a>
+
+					<div class="dropdown-menu dropdown-menu-right animated flipInY">
+						<n:ul class="dropdown-user">
+							<n:li class="user-box">
+								<div class="well">
+									<div sclass="d-block d-lg-none">
+										<label value="${sessionScope.unidadeAutenticada.nome}" />
+										<n:hr></n:hr>
+									</div>
+									<label id="codigoUnidade" value="${sessionScope.unidadeAutenticada.codigo}" />									
+								</div>
+								<label id="nomeLogado" value="${sessionScope.usuarioAutenticado.nome}" zclass="nomeLogado" />
+							</n:li>
+							 <n:li role="separator" class="divider"></n:li>
+							<n:li>
+								<a href="/area-restrita/">
+									<n:i class="fas fa-sign-out-alt"></n:i>
+									<label value="Ir para a área restrita" />
+								</a>
+							</n:li>
+ 							<n:li role="separator" class="divider"></n:li>
+							<n:li>
+								<a onClick="classecontrole.signOut()">
+									<n:i class="fas fa-power-off "></n:i>
+									<label value="Sair" />
+								</a>
+							</n:li>
+						</n:ul>
+					</div>
+				</n:li>
+			</n:ul>
+		</div>
+	</div>
+
+	<div zclass="main">
+		<div id="meio" zclass="content container-fluid"/>
+	</div>
+	
+	<div zclass="footer">
+		<div zclass="container-fluid">
+			<div zclass="row">
+				<div zclass="col-md-9 footerVersion">
+					<span class="version">V 1.0</span>
+				</div>
+				<div zclass="col-md-3 footerLogo">
+					<image src="/publico/br/gov/prodemge/tema/imagens/logo_prodemge.png" sclass="img-fluid"/>
+				</div>
+			</div>
+		</div>
+	</div>
+</window>

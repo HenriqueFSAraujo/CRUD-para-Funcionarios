@@ -1,0 +1,19 @@
+<vlayout>
+	<div class="form-group row">
+		<label value="* Nome:" sclass="col-md-1 col-form-label" />
+		<div class="col-md-11">
+			<textboxbind nomeDoObjeto="classecontrole.objetoAtual.nome" constraint="no empty" upper="false" />
+		</div>
+	</div>
+	<div class="form-group row">
+		<label value="* Ementa:" sclass="col-md-1 col-form-label" />
+		<div class="col-md-11">
+			<ckeditorbind nomeDoObjeto="classecontrole.objetoAtual.ementa" />
+		</div>
+	</div><div class="form-group row">
+		<label value="* Área do Curso:" sclass="col-md-1 col-form-label" />
+		<div class="col-md-11">
+			<bandboxbind nomeDoObjeto="classecontrole.objetoAtual.areaCurso"/>
+		</div>
+	</div>
+</vlayout>

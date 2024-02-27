@@ -1,0 +1,27 @@
+<detbox width="100%" nomeDoObjeto="classecontrole.objetoAtual.anexos" label="Anexos">
+	<listboxdet id="anexos" rows="0" pageSize="10">
+		<listhead>
+			<listheader label="Nome do documento"  />
+			<listheader label="Formato do documento"  />
+			<listheader label="Data de inclusão"  />
+			<listheader label="Anexar" />
+			<listheader label="Download assinatura" />
+			<listheader label="Assinar" />
+		</listhead>
+		<listitem value="@{anexos}">
+			<listcell label="@{anexos.nome}"  />
+			<listcell label="@{anexos.formato}"  />
+			<listcell label="@{anexos.tsMovimentacao}" />
+			<listcell>
+				 <buttonuploadbind nomeDoObjeto="anexos.bytes" tooltiptext="Anexar" sclass="btn btn-tema" accept=".pdf" />
+			</listcell>
+			<listcell>
+				<buttondownloadbind nomeDoObjeto="anexos.bytes" tooltiptext="Download assinatura" impAssinaturaPdf="true" baixarOriginalAssinatura="true" sclass="btn btn-tema"/>
+			</listcell>
+			<listcell>
+				<buttonassinaturadigital nomeDoObjeto="anexos.bytes" tooltiptext="Assinar" sclass="btn btn-tema" />
+			</listcell>
+		</listitem>
+	</listboxdet>
+	<signatureview></signatureview>
+</detbox>

@@ -1,0 +1,12 @@
+<pretty-config xmlns="http://ocpsoft.com/prettyfaces/3.3.0" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://ocpsoft.org/prettyfaces/3.3.0 http://ocpsoft.org/xml/ns/prettyfaces/ocpsoft-pretty-faces-3.3.0.xsd">
+	<url-mapping id="index">
+		<pattern value="/" />
+		<view-id value="/publico/br/gov/prodemge/proddigio/meucurso/visao/index.zul" />
+	</url-mapping>
+	<url-mapping id="indexPrivado">
+		<pattern value="/area-restrita/" />
+		<view-id value="/privado/br/gov/prodemge/proddigio/meucurso/visao/index.zul" />
+	</url-mapping>
+</pretty-config>
