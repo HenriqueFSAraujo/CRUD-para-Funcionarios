@@ -1,0 +1,11 @@
+**/target/
+**/bin/
+
+*.classpath
+*.factorypath
+*.project
+*.settings/
+*.log
+*.yaml
+*.jar
+Dockerfile
