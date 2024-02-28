@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<configuration>
+	<system config-name="system" />
+	<properties fileName="meucurso-aplicacao.properties" config-name="aplicacao" />
+	<properties fileName="meucurso-mensagem.properties" config-name="mensagem"/>
+</configuration>

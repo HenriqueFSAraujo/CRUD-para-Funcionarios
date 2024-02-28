@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+	<persistence-unit name="meucurso-ds" transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<non-jta-data-source>java:/meucurso-ds</non-jta-data-source>
+		<!--ENTIDADES-->
+		<class>br.gov.prodemge.proddigio.meucurso.entidades.casousopublico.CasoUsoPublicoVO</class>
+		
+		<class>br.gov.prodemge.proddigio.meucurso.entidades.compromisso.CompromissoVO</class>
+		<class>br.gov.prodemge.proddigio.meucurso.entidades.curso.CursoVO</class>
+		
+		
+		<class>br.gov.prodemge.proddigio.meucurso.entidades.cidade.LogradouroVO</class>			
+		<class>br.gov.prodemge.proddigio.meucurso.entidades.cidade.EstadoSimplesVO</class>			
+		<class>br.gov.prodemge.proddigio.meucurso.entidades.cidade.CidadeVO</class>			
+		<class>br.gov.prodemge.proddigio.meucurso.entidades.cidade.PaisVO</class>
+		<class>br.gov.prodemge.proddigio.meucurso.entidades.cidade.BairroVO</class>		
+				
+		<class>br.gov.prodemge.proddigio.meucurso.entidades.funcionario.FuncionarioEnderecoVO</class>	
+		<class>br.gov.prodemge.proddigio.meucurso.entidades.funcionario.FuncionarioAnexoVO</class>	
+		<class>br.gov.prodemge.proddigio.meucurso.entidades.funcionario.FuncionarioCursoVO</class>
+		<class>br.gov.prodemge.proddigio.meucurso.entidades.funcionario.FuncionarioVO</class>
+		
+		
+		<properties>
+			<property name="jboss.entity.manager.jndi.name" value="java:/em" />
+			<property name="jboss.entity.manager.factory.jndi.name" value="java:/emf/meucurso" />
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="hibernate.show_sql" value="false" />
+			<property name="hibernate.format_sql" value="false" />
+		</properties>
+		
+	</persistence-unit>
+</persistence> 
+

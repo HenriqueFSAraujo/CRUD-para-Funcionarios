@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>br.gov.prodemge.prodigio</groupId>
+		<artifactId>meucurso</artifactId>
+		<version>0.01-SNAPSHOT</version>
+		<relativePath>../meucurso/pom.xml</relativePath>
+	</parent>
+
+	<artifactId>meucurso-domain</artifactId>
+
+	<name>meucurso-domain</name>
+	<description>Domínio</description>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.hibernate.javax.persistence</groupId>
+			<artifactId>hibernate-jpa-2.0-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>br.mg.gov.prodemge.prodigio</groupId>
+			<artifactId>prodigio-dominio</artifactId>
+		</dependency>
+	
+		<dependency>
+			<groupId>br.mg.gov.prodemge.vaccine.prodigio8</groupId>
+			<artifactId>vaccine-domain</artifactId>
+			<version>${version.vacina}</version>
+		</dependency>
+	</dependencies>
+</project>
